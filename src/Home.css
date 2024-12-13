@@ -1,0 +1,572 @@
+button, .logo {
+  cursor: pointer;
+}
+
+button, body, ::placeholder {
+  font-family: "Outfit", sans-serif;
+}
+
+::placeholder {
+  font-size: 1.250rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 134px;
+  background: #000;
+  height: 8vh;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.812rem;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.miruku-logo {
+  color: #000;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logo-and-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.search-bar-container {
+  border-style: solid;
+  border: 1px solid #000;
+  width: 27.125rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.signOut {
+  display: flex;
+}
+
+.user-auth {
+  display: flex;
+  gap: 1em;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.primary-nav-button {
+  border-radius: 8px;
+  background: #FFF;
+  font-size: 1.250rem;
+}
+
+.black-nav-button {
+  font-size: 20px;
+  color: white;
+  background: black;
+}
+
+.black-nav-button, .primary-nav-button {
+  border-style: solid;
+}
+
+.search-text {
+  font-size: 2.438rem;
+}
+
+.previewContainer, .browseContainer, .columnContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 8vw;
+}
+
+.browseContainer {
+  margin-top: 2vh;
+}
+
+.cardContainer {
+  margin-bottom: 2vh;
+}
+
+.columnContainer {
+  flex-direction: row;
+  margin-top: 4vh;
+  gap: 2vw;
+}
+
+.cardCategory {
+  font-size: 2em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.cardImage {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.86);
+  cursor: pointer;
+}
+
+.aImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Detail Page */
+
+.banner {
+  width: 100vw;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leftCol img {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.86);
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.middleCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.section, .blackSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  margin-bottom: 4vh;
+  padding: 1vw;
+  border-radius: 12px;
+  background: var(--White, #FFF);
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.50);
+}
+
+.blackSection {
+  color:#FFFFFF;
+  background: var(--Black, #000);
+  gap: 1vh;
+}
+
+.animeHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 1vw;
+}
+
+.introH3 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.episodes {
+  font-size: 1em;
+  color: var(--Dusk, #676565);
+}
+
+.synopsis {
+  font-size: 1.25em;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.detailsH3 {
+  font-size: 1.9em;
+  font-weight: 400;
+  margin-bottom: 1.5vh;
+}
+
+.details div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.details label, .keyDetails label {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-decoration-line: underline;
+  text-underline-position: from-font;
+}
+
+.details p, .keyDetails p{
+  font-size: 1.25em;
+  font-weight: 400;
+  margin-top: 1vh;
+}
+
+.genres{
+  margin-bottom: 0.2vh;
+}
+
+.dropdownContainer {
+  margin: 1.5vh 0;
+}
+
+.dropdownButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 1.25em;
+  border-radius: 8px;
+  background: var(--Black, #000);
+}
+
+.selection {
+  font-size: 1.25em;
+  padding: 1vw;
+  width: 100%;
+  color: #000000;
+  border-radius: 8px;
+  background: var(--White, #FFF);
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.50);
+}
+
+.keyDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Status Distribution */
+.blackSection label{
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.legendValues {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 2vw;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.legendContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin:0;
+}
+
+.legendContent p{
+  margin:0;
+}
+
+.legendContent div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.25em;
+  margin:0;
+}
+
+.userText {
+  font-size: 0.812em;
+  margin:0;
+}
+
+.graphic {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2px;
+}
+
+.completed, .watching, .paused, .planned, .dropped {
+  display: flex;
+}
+
+.profileContainer, .animeListContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15vw;
+}
+
+.subNav {
+  background-color: #c0c0c0;
+  padding: 1vw;
+}
+
+.subNav div {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.directory div{
+  cursor: pointer;
+}
+
+.profileBanner {
+  height: 30vh;
+  object-fit: cover;
+}
+
+.profileImage {
+  width: 10vw;
+  height: 15vh;
+  border-radius: 16px;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-bottom: 2vh;
+}
+
+.textContent p {
+  margin: 0;
+}
+
+.username {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.underBanner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1vw;
+  margin-top: -5vh;
+}
+
+.horizontalDivider, .horizontalDividerW {
+  height: 5px;
+  border-radius: 8px;
+  background: var(--Background, #000000);
+  margin-bottom: 2vh;
+}
+
+.horizontalDivider {
+  height: 2vh;
+  border-radius: 0;
+}
+
+.categoryContainer h3{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.listHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 0.5em;
+  flex: 1 0 0;
+  width: 100%;
+}
+
+.listTitle {
+  flex-grow: 3;
+}
+
+.listScoreProgress {
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+}
+
+.horizontalDivider, .horizontalDividerW {
+  height: 5px;
+  border-radius: 8px;
+  background: var(--Background, #000000);
+  margin-bottom: 2vh;
+}
+
+.horizontalDivider {
+  height: 2vh;
+  border-radius: 0;
+}
+
+.categoryContainer h3{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.listHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 0.5em;
+  flex: 1 0 0;
+  width: 100%;
+}
+
+.listTitle {
+  flex-grow: 3;
+}
+
+.listScoreProgress, .entrieScoreProgress {
+  display: flex;
+  align-items: flex-start;
+  gap: 8.5vw;
+}
+
+.horizontalDividerW {
+  width: 100%;
+  height: 5px;
+  background: var(--Background, #FFFFFF);
+}
+
+.entrieScoreProgress {
+  gap: 5vw;
+}
+
+.incrementContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.sub {
+  cursor: pointer;
+}
+
+.add {
+  cursor: pointer;
+}
+
+.animeListRow {
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Text Color Definitions */
+.completedText {
+  color: var(--Melon, #C9F8C9);
+  margin:0;
+}
+
+.watchingText {
+  color: var(--OG-Milk, #689DDE);
+  margin:0;
+}
+
+.pausedText {
+  color: #F9D89C;
+  margin:0;
+}
+
+.plannedText {
+  color: var(--Banana, #FFF7B3);
+  margin:0;
+}
+
+.droppedText {
+  color: var(--Strawberry, #FBD9E8);
+  margin:0;
+}
+
+/*Status Blocks*/
+.completedBg {
+  background-color: var(--Melon, #C9F8C9);
+  border-radius: 12px;
+  height:5vh;
+}
+
+.watchingBg {
+  background-color: var(--OG-Milk, #689DDE);
+  border-radius: 12px;
+  height:5vh;
+}
+
+.pausedBg {
+  background-color: #F9D89C;
+  border-radius: 12px;
+  height:5vh;
+}
+
+.plannedBg {
+  background-color: var(--Banana, #FFF7B3);
+  border-radius: 12px;
+  height:5vh;
+}
+
+.droppedBg {
+  background-color: var(--Strawberry, #FBD9E8);
+  border-radius: 12px;
+  height:5vh;
+}
+
+.placeholderBg {
+  background-color: var(--Strawberry, #a5a5a5);
+  border-radius: 12px;
+  height:5vh;
+}
