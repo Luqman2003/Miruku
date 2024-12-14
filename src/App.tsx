@@ -4,8 +4,8 @@ import Home from "./Components/Pages/Home";
 import SignIn from "./Components/UserAuth/SignIn";
 import './Stylesheets/App.css';
 import Register from "./Components/UserAuth/Register";
-import Layout from "./Components/Layout";
-import DetailPage from "./Components/Pages/DetailPage";
+import Layout from "./Components/Layout/Layout";
+import DetailsPage from "./Components/Pages/DetailsPage";
 import ErrorPage from './Components/Pages/ErrorPage';
 import Profile from "./Components/Pages/Profile";
 import Browse from './Components/Pages/Browse';
@@ -41,7 +41,7 @@ function App() {
                 },
                 {
                     path: "/anime/:title",
-                    element: <DetailPage />
+                    element: <DetailsPage />
                 },
                 {
                     path: "/browse",
@@ -52,7 +52,7 @@ function App() {
                     element: <Profile />,
                 },
                 {
-                    path: "/animelist/:uid",
+                    path: "/animeList/:uid",
                     element: <AnimeList />,
                 },
                 {

@@ -1,5 +1,6 @@
-import FetchAndDisplayImage from '../FetchImages';
+import FetchImages from '../FetchImages';
 import {useNavigate } from 'react-router-dom';
+import React from "react";
 
 
 interface Anime {
@@ -25,15 +26,14 @@ const BrowsePreview: React.FC<BrowsePreviewProps> = ({ data, limit, label}) => {
     const animeRedirect = (anime: Anime) => {
         navigate(`/anime/${anime.title}`, { state: { anime } });
     };
-    console.log(data);
-    console.log(animeEntries);
+
     return (
         <div className="cardContainer">
             <h3 className="cardCategory" onClick={browseRedirect}>{label}</h3>
             <div className="card">
                 {animeEntries.map((anime: Anime) => (
                     <div key={anime.mal_id} className={"cardImage"} onClick={() => animeRedirect(anime)}>
-                        <FetchAndDisplayImage imageUrl={anime.images.jpg.image_url}/>
+                        <FetchImages imageUrl={anime.images.jpg.image_url}/>
                     </div>
                 ))}
             </div>
