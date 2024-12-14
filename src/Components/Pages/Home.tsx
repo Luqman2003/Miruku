@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchDataFromApi } from "../../Api/api";
 import { ring } from 'ldrs';
 import Loading from "./Loading";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../Layout/SearchBar";
 import BrowsePreview from "../Elements/BrowsePreview";
 import "../../Stylesheets/Home.css";
 

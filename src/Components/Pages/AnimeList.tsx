@@ -34,7 +34,7 @@ const AnimeList = () => {
 
         setStatusToAnime(newStatusToAnime);
       } catch (error) {
-        console.error("error fetching animelist: ", error);
+        console.error("error fetching animeList: ", error);
       }
     };
     if (auth.currentUser && auth.currentUser.uid) {
@@ -55,7 +55,7 @@ const AnimeList = () => {
   };
 
   const animeListRedirect = () => {
-    navigate(`/animelist/${auth?.currentUser?.uid}`);
+    navigate(`/animeList/${auth?.currentUser?.uid}`);
   };
 
   const ratingCategories = [
@@ -98,7 +98,7 @@ const AnimeList = () => {
                         {statusToAnime[key].map((anime) => (
                           <div className="animeListRow">
                             <label className="listTitle">{anime}</label>
-                            <div className="entireScoreProgress">
+                            <div className="entrieScoreProgress">
                               <div className="incrementContainer">
                                 <img
                                   src={subtract}
@@ -148,7 +148,7 @@ const AnimeList = () => {
                         {statusToAnime[key].map((anime) => (
                           <div className="animeListRow">
                             <label className="listTitle">{anime}</label>
-                            <div className="entireScoreProgress">
+                            <div className="entrieScoreProgress">
                               <div className="incrementContainer">
                                 <img
                                   src={subtract}
@@ -197,7 +197,7 @@ const AnimeList = () => {
                         {statusToAnime[key].map((anime) => (
                           <div className="animeListRow">
                             <label className="listTitle">{anime}</label>
-                            <div className="entireScoreProgress">
+                            <div className="entrieScoreProgress">
                               <div className="incrementContainer">
                                 <img
                                   src={subtract}
@@ -246,7 +246,7 @@ const AnimeList = () => {
                         {statusToAnime[key].map((anime) => (
                           <div className="animeListRow">
                             <label className="listTitle">{anime}</label>
-                            <div className="entireScoreProgress">
+                            <div className="entrieScoreProgress">
                               <div className="incrementContainer">
                                 <img
                                   src={subtract}
@@ -295,7 +295,7 @@ const AnimeList = () => {
                         {statusToAnime[key].map((anime) => (
                           <div className="animeListRow">
                             <label className="listTitle">{anime}</label>
-                            <div className="entireScoreProgress">
+                            <div className="entrieScoreProgress">
                               <div className="incrementContainer">
                                 <img
                                   src={subtract}
