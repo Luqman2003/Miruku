@@ -4,7 +4,7 @@ import { ring } from 'ldrs';
 import Loading from "./Loading";
 import SearchBar from "../SearchBar/SearchBar";
 import BrowsePreview from "../Elements/BrowsePreview";
-import "../../Home.css";
+import "../../Stylesheets/Home.css";
 
 type Anime = {
     mal_id: number;

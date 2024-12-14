@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Pages/Home";
 import SignIn from "./Components/UserAuth/SignIn";
-import './App.css';
+import './Stylesheets/App.css';
 import Register from "./Components/UserAuth/Register";
 import Layout from "./Components/Layout";
 import DetailPage from "./Components/Pages/DetailPage";
