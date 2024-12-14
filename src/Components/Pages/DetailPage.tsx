@@ -13,11 +13,17 @@ import Loading from "./Loading";
 
 interface Statistics {
   completed: number;
+  completedFormatted: string;
   watching: number;
+  watchingFormatted: string;
   on_hold: number;
+  on_holdFormatted: string;
   plan_to_watch: number;
+  plan_to_watchFormatted: string;
   dropped: number;
+  droppedFormatted: string;
   total: number;
+  totalFormatted: string;
 }
 
 const DetailPage = () => {
@@ -31,20 +37,42 @@ const DetailPage = () => {
   const [userAnimeStatus, setUserAnimeStatus] = useState("");
   const [loading, setLoading] = useState(true);
 
+  // Helper function to format numbers with commas
+  const formatNumber = (num: number): string => {
+    return new Intl.NumberFormat().format(num);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const eps = await fetchDataFromApi(`anime/${anime.mal_id}/episodes`);
       setEpisodes(eps.data);
+
       const stats = await fetchDataFromApi(`anime/${anime.mal_id}/statistics`);
-      setStatistics(stats.data);
+
+      // Prepare statistics with both raw and formatted values
+      const formattedStats: Statistics = {
+        completed: stats.data.completed,
+        completedFormatted: formatNumber(stats.data.completed),
+        watching: stats.data.watching,
+        watchingFormatted: formatNumber(stats.data.watching),
+        on_hold: stats.data.on_hold,
+        on_holdFormatted: formatNumber(stats.data.on_hold),
+        plan_to_watch: stats.data.plan_to_watch,
+        plan_to_watchFormatted: formatNumber(stats.data.plan_to_watch),
+        dropped: stats.data.dropped,
+        droppedFormatted: formatNumber(stats.data.dropped),
+        total: stats.data.total,
+        totalFormatted: formatNumber(stats.data.total),
+      };
+      setStatistics(formattedStats);
 
       if (auth.currentUser) {
         const animeRef = doc(
-          db,
-          "Users",
-          auth.currentUser.uid,
-          "AnimeList",
-          anime.mal_id.toString()
+            db,
+            "Users",
+            auth.currentUser.uid,
+            "AnimeList",
+            anime.mal_id.toString()
         );
         getDoc(animeRef).then((docSnap) => {
           if (docSnap.exists()) {
@@ -180,7 +208,7 @@ const DetailPage = () => {
                   <div className="legendContent">
                     <p>Completed</p>
                     <div>
-                      <p className="completedText">{statistics?.completed}</p>
+                      <p className="completedText">{statistics?.completedFormatted}</p>
                       <p className="userText">Entries</p>
                     </div>
                   </div>
@@ -193,7 +221,7 @@ const DetailPage = () => {
                   <div className="legendContent">
                     <p>Watching</p>
                     <div>
-                      <p className="watchingText">{statistics?.watching}</p>
+                      <p className="watchingText">{statistics?.watchingFormatted}</p>
                       <p className="userText">Entries</p>
                     </div>
                   </div>
@@ -206,7 +234,7 @@ const DetailPage = () => {
                   <div className="legendContent">
                     <p>Paused</p>
                     <div>
-                      <p className="pausedText">{statistics?.on_hold}</p>
+                      <p className="pausedText">{statistics?.on_holdFormatted}</p>
                       <p className="userText">Entries</p>
                     </div>
                   </div>
@@ -219,7 +247,7 @@ const DetailPage = () => {
                   <div className="legendContent">
                     <p>Planned</p>
                     <div>
-                      <p className="plannedText">{statistics?.plan_to_watch}</p>
+                      <p className="plannedText">{statistics?.plan_to_watchFormatted}</p>
                       <p className="userText">Entries</p>
                     </div>
                   </div>
@@ -232,7 +260,7 @@ const DetailPage = () => {
                   <div className="legendContent">
                     <p>Dropped</p>
                     <div>
-                      <p className="droppedText">{statistics?.dropped}</p>
+                      <p className="droppedText">{statistics?.droppedFormatted}</p>
                       <p className="userText">Entries</p>
                     </div>
                   </div>
