@@ -119,6 +119,7 @@ const DetailsPage = () => {
           </div>
         </div>
 
+        {/*Needs to be refactored*/}
         <div className="middleCol">
           <div className="section">
             <div className="animeHeader">
